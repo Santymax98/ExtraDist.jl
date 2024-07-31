@@ -1,6 +1,4 @@
-using ExtraDist
-using Test
+println("Testing...")
 
-@testset "ExtraDist.jl" begin
-    # Write your tests here.
-end
+include("continuous_test.jl")
+include("discrete_test.jl")
