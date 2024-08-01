@@ -23,10 +23,10 @@ LogExpFunctions = "0.3"
 QuadGK = "2"
 Random = "1.5"
 Roots = "1"
-SpecialFunctions = "2"
+SpecialFunctions = "0.7"
 Statistics = "1.5"
 StatsBase = "0.33"
-HypergeometricFunctions = "0.1"
+HypergeometricFunctions = "0.0.1"
 LambertW = "0.4"
 
 [extras]
