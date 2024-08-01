@@ -1,7 +1,7 @@
 name = "ExtraDist"
 uuid = "6655a985-646a-4595-ab89-59c8a6085518"
 authors = ["Santiago Jimenez Ramos"]
-version = "1.0.0-DEV"
+version = "0.1.0"
 
 [deps]
 Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
@@ -17,7 +17,17 @@ Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
 StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
 
 [compat]
-julia = "1.6.7"
+julia = "1.6"
+Distributions = "0.25"
+LogExpFunctions = "0.3"
+QuadGK = "2"
+Random = "1.5"
+Roots = "1"
+SpecialFunctions = "2"
+Statistics = "1.5"
+StatsBase = "0.33"
+HypergeometricFunctions = "0.1"
+LambertW = "0.1"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
