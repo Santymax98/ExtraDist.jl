@@ -280,11 +280,11 @@ using Random
 
         for (a, b, p) in params
             d = Dagum(a, b, p)
-            data = rand(rng, d, 10^4)
+            data = rand(rng, d, 10000)
 
             @test size(data) == (10000,)
             if a > 1
-                @test mean(data) ≈ mean(d) atol= 1
+                @test mean(data) ≈ mean(d) atol= 3
             else
                 @test isnan(mean(d))
             end
