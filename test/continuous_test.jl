@@ -284,7 +284,7 @@ using Random
 
             @test size(data) == (10000,)
             if a > 1
-                @test mean(data) ≈ mean(d) atol= 2.5
+                @test mean(data) ≈ mean(d) atol= 1
             else
                 @test isnan(mean(d))
             end
