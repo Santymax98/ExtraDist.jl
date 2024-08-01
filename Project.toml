@@ -26,7 +26,7 @@ Roots = "1"
 SpecialFunctions = ">=0.7, <3.0"
 Statistics = "1.5"
 StatsBase = "0.33"
-HypergeometricFunctions = "0.0.1"
+HypergeometricFunctions = "0.3"
 LambertW = "0.4"
 
 [extras]
