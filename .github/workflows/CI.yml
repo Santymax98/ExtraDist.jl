@@ -75,6 +75,6 @@ jobs:
         shell: julia --project=docs --color=yes {0}
         run: |
           using Documenter: DocMeta, doctest
-          using ExtraDist
-          DocMeta.setdocmeta!(ExtraDist, :DocTestSetup, :(using ExtraDist); recursive=true)
-          doctest(ExtraDist)
+          using ExtraDistributions
+          DocMeta.setdocmeta!(ExtraDistributions, :DocTestSetup, :(using ExtraDistributions); recursive=true)
+          doctest(ExtraDistributions)

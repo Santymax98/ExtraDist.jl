@@ -11,7 +11,7 @@ makedocs(;
     sitename="ExtraDistributions.jl",
     format=Documenter.HTML(;
         prettyurls = get(ENV, "CI", "false") == "true",
-        canonical="https://Santymax98.github.io/ExtraDist.jl",
+        canonical="https://Santymax98.github.io/ExtraDistributions.jl",
         edit_link="master",
         assets=String[],
     ),
