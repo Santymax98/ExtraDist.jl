@@ -1,4 +1,4 @@
-module ExtraDist
+module ExtraDistributions
     
     using Distributions
     import Distributions: @check_args, @distr_support, @inline

@@ -1,8 +1,8 @@
 # Welcome to ExtraDist
 
-The [*ExtraDist*](https://github.com/Santymax98/ExtraDist.jl) package is a comprehensive extension of [*Distributions.jl*](https://github.com/JuliaStats/Distributions.jl), designed to expand its functionality by incorporating both discrete and continuous probability distributions not available in the base package. *ExtraDist* aims to enhance the breadth of statistical tools available for data analysis, simulation, and probabilistic modeling.
+The [*ExtraDistributions*](https://github.com/Santymax98/ExtraDistributions.jl) package is a comprehensive extension of [*Distributions.jl*](https://github.com/JuliaStats/Distributions.jl), designed to expand its functionality by incorporating both discrete and continuous probability distributions not available in the base package. *ExtraDist* aims to enhance the breadth of statistical tools available for data analysis, simulation, and probabilistic modeling.
 
-With *ExtraDist*, you can:
+With *ExtraDistributions*, you can:
 
 - **Sample from distributions:** Draw random samples from a variety of distributions.
 - **Calculate moments and other properties:** Obtain moments (such as mean, variance, skewness, and kurtosis), entropy, and other statistical properties.

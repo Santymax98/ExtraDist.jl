@@ -1,5 +1,5 @@
 using Test
-using ExtraDist
+using ExtraDistributions
 using Distributions
 using Random
 

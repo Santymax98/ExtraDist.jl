@@ -2,7 +2,7 @@
 
 ## Compatibility with Distributions.jl
 
-The *ExtraDist* package is fully compatible with the [*Distributions.jl*](https://github.com/JuliaStats/Distributions.jl) package. As an extension of *Distributions.jl*, *ExtraDist* supports all the core functionalities provided by *Distributions.jl*, including but not limited to:
+The *ExtraDistributions* package is fully compatible with the [*Distributions.jl*](https://github.com/JuliaStats/Distributions.jl) package. As an extension of *Distributions.jl*, *ExtraDistributions* supports all the core functionalities provided by *Distributions.jl*, including but not limited to:
 
 ### Truncated Distributions 
 
@@ -58,10 +58,10 @@ rank: 5
 
 ## Integration with Other Packages
 
-Because of its compatibility with *Distributions.jl*, *ExtraDist* seamlessly integrates with other Julia packages that also build on *Distributions.jl*. This includes:
+Because of its compatibility with *Distributions.jl*, *ExtraDistributions* seamlessly integrates with other Julia packages that also build on *Distributions.jl*. This includes:
 
 - **[Turing.jl](https://github.com/TuringLang/Turing.jl)**: For probabilistic programming and Bayesian inference.
 - **[HypothesisTests.jl](https://github.com/JuliaStats/HypothesisTests.jl)**: For hypothesis testing and statistical testing.
 - **[Copulas.jl](https://github.com/lrnv/Copulas.jl)**: For copula-based modeling and simulations.
 
-This broad compatibility ensures that you can use *ExtraDist* in a wide range of statistical applications, from advanced simulations to Bayesian analysis and hypothesis testing.
+This broad compatibility ensures that you can use *ExtraDistributions* in a wide range of statistical applications, from advanced simulations to Bayesian analysis and hypothesis testing.

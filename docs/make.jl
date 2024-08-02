@@ -1,14 +1,14 @@
-using ExtraDist
+using ExtraDistributions
 using Documenter
 using GR
 using Distributions
 
-DocMeta.setdocmeta!(ExtraDist, :DocTestSetup, :(using ExtraDist); recursive=true)
+DocMeta.setdocmeta!(ExtraDistributions, :DocTestSetup, :(using ExtraDistributions); recursive=true)
 
 makedocs(;
     modules=[ExtraDist],
     authors="Santiago Jimenez Ramos",
-    sitename="ExtraDist.jl",
+    sitename="ExtraDistributions.jl",
     format=Documenter.HTML(;
         prettyurls = get(ENV, "CI", "false") == "true",
         canonical="https://Santymax98.github.io/ExtraDist.jl",
@@ -23,6 +23,6 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/Santymax98/ExtraDist.jl",
+    repo="github.com/Santymax98/ExtraDistributions.jl",
     devbranch="main",
 )

@@ -2,7 +2,7 @@
 
 ## Installation
 
-The *ExtraDist* package is available through the Julia package system by running `Pkg.add("ExtraDist")`.
+The *ExtraDistributions* package is available through the Julia package system by running `Pkg.add("ExtraDistributions")`.
 Throughout, we assume that you have installed the package.
 
 ## Starting With a Poisson Zero-infalted Distribution ZIP
@@ -12,7 +12,7 @@ We start by drawing 100 observations from a Poison zero infalted with parameters
 The first step is to set up the environment:
 
 ```julia
-julia> using Random, Distributions, ExtraDist
+julia> using Random, Distributions, ExtraDistributions
 
 julia> Random.seed!(2024) # Setting the seed
 ```
