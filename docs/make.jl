@@ -6,7 +6,7 @@ using Distributions
 DocMeta.setdocmeta!(ExtraDistributions, :DocTestSetup, :(using ExtraDistributions); recursive=true)
 
 makedocs(;
-    modules=[ExtraDist],
+    modules=[ExtraDistributions],
     authors="Santiago Jimenez Ramos",
     sitename="ExtraDistributions.jl",
     format=Documenter.HTML(;
