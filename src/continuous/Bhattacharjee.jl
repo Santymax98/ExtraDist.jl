@@ -13,6 +13,10 @@ Bhattacharjee(σ)       # equivalent to Bhattacharjee(0, 1, σ)
 
 params(d)        # Get the parameters, i.e. (a , b, σ)
 ```
+
+External link:
+
+*[Bhattacharjee Distributions on Technometrics](https://www.tandfonline.com/doi/abs/10.1080/00401706.1963.10490111)
 """
 struct Bhattacharjee{T<:Real} <: Distributions.ContinuousUnivariateDistribution
     a::T

@@ -1,18 +1,23 @@
 """
     Yule(a)
 
-An *Yule* distribution is defined by the following probability density function (PDF):
+The *Yule* distribution is a discrete probability distribution defined by the following probability mass function (PMF):
 
 ```math
-f(x) =
+P(X = k) = a * B(k, a + 1)
 ```
-where:
+where: 
+
+- ``B(k, a + 1)`` is a beta function
 
 ```julia
 Yule()        # equivalent to Yule(1)
 
 params(d)        # Get the parameters, i.e. a
 ```
+
+External link
+* [Yule distribution on Wikipedia](https://en.wikipedia.org/wiki/Yule%E2%80%93Simon_distribution)
 """
 struct Yule{T<:Real} <: Distributions.DiscreteUnivariateDistribution
     a::T

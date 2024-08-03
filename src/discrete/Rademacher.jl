@@ -1,7 +1,7 @@
 """
     Rademacher()
 
-A *Rademacher distribution* ... 
+A *Rademacher distribution* is a discrete probability distribution where a random variate ``X`` has a ``50\\%`` chance of being ``+1`` and a ``50\\%`` chance of being ``-1``.
 
 ```math
 P(X = k) = \\begin{cases}
@@ -13,6 +13,10 @@ P(X = k) = \\begin{cases}
 ```julia
 Rademacher()    # Rademacher distribution 
 ```
+
+External link:
+
+* [Rademacher distribution on Wikipedia](https://en.wikipedia.org/wiki/Rademacher_distribution)
 """
 struct Rademacher <: Distributions.DiscreteUnivariateDistribution
 end

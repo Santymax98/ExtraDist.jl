@@ -1,9 +1,8 @@
 """
-    Benini(α, β, σ)
+A *Benini* distribution, which is a three-parameter distribution often used in economics and actuarial science. The probability density function (pdf) of the Benini distribution is given by:
 
-A *Benini* distribution, 
 ```math
-f(x) = 
+f(x; \\alpha, \\beta, \\sigma) = e^{-\\alpha \\log\\left(\\frac{x}{\\sigma}\\right) - \\beta \\left[\\log\\left(\\frac{x}{\\sigma}\\right)\\right]^2} \\cdot \\left(\\frac{\\alpha}{x} + \\frac{2\\beta \\log\\left(\\frac{x}{\\sigma}\\right)}{x}\\right), \\quad x > \\sigma
 ```
 
 ```julia
@@ -13,6 +12,10 @@ Benini(α, β)        # equivalent to Benini(α, β, 1)
 
 params(d)        # Get the parameters, i.e. (α, β, σ)
 ```
+
+External links:
+
+* [Benini distribution on Wikipedia](https://en.wikipedia.org/wiki/Benini_distribution)
 """
 struct Benini{T<:Real} <: Distributions.ContinuousUnivariateDistribution
     α::T

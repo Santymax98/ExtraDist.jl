@@ -1,10 +1,10 @@
 """
     FlorySchulz(a)
 
-An *FlorySchulz* distribution is defined by the following probability density function (PDF):
+A *Flory-Schulz* distribution, commonly used in polymer chemistry to describe the distribution of chain lengths, is defined by the following probability mass function (PMF):
 
 ```math
-f(x) =
+P(X = k) = a^2 k (1 - a)^{k-1}, \\quad k \\in \\{1, 2, 3, \\dots\\}
 ```
 where:
 
@@ -13,6 +13,10 @@ FlorySchulz()        # equivalent to FlorySchulz(0.5)
 
 params(d)        # Get the parameters, i.e. a
 ```
+
+External link:
+
+* [Flory Schulz distribution on Wikipedia](https://en.wikipedia.org/wiki/Flory%E2%80%93Schulz_distribution)
 """
 struct FlorySchulz{T<:Real} <: Distributions.DiscreteUnivariateDistribution
     a::T

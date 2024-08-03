@@ -1,17 +1,24 @@
 """
     ZIP(λ, p)
 
-A *Zero inflated Poisson distribution* ... 
+The *Zero-Inflated Poisson (ZIP) distribution* is a discrete probability distribution that models a scenario where there are more zeros in the data than would be expected from a standard Poisson distribution. It is defined by the following probability mass function (PMF):
 
 ```math
-P(X = k) = 
-```
+P(X = k) =
+\\begin{cases} 
+p + (1 - p) \\cdot e^{-\\lambda} & \\text{if } k = 0, \\
+(1 - p) \\cdot \\frac{\\lambda^k \\cdot e^{-\\lambda}}{k!} & \\text{if } k \\geq 1.
+\\end{cases}
 
 ```julia
 ZIP()      # equivalent to ZIP(1, 0.5)
 ZIP(λ)     # equivalent to ZIP(λ, 0.5)
 
 params(d)   # Get the parameters, i.e. (λ, p)
+
+External link:
+
+*[Zero Inflated Poisson (ZIP) distribution on Wikipedia](https://en.wikipedia.org/wiki/Zero-inflated_model#Zero-inflated_Poisson)
 """
 struct ZIP{T<:Real} <: Distributions.DiscreteUnivariateDistribution
     λ::T

@@ -1,9 +1,10 @@
 """
     Benktander_Type2(a, b)
 
-A *Benktander_Type2* distribution, 
+A *Benktander_Type2* distribution, which is used in actuarial science for modeling heavy-tailed distributions. The probability density function (pdf) of the Benktander Type 2 distribution is given by:
+
 ```math
-f(x) = 
+f(x; a, b) = \\frac{e^{\\frac{a}{b}(1 - x^b)} \\cdot x^{b-2}}{b} \\left( a \\cdot x^b - b + 1 \\right), \\quad x \\geq 1
 ```
 
 ```julia
@@ -12,6 +13,10 @@ Benktander_Type2(a)        # equivalent to Benktander_Type2(a, 1)
 
 params(d)        # Get the parameters, i.e. (a, b)
 ```
+
+External links:
+
+* [Benktander Type II distribution on Wikipedia](https://en.wikipedia.org/wiki/Benktander_type_II_distribution)
 """
 struct Benktander_Type2{T<:Real} <: Distributions.ContinuousUnivariateDistribution
     a::T

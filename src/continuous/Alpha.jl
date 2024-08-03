@@ -4,12 +4,12 @@
 An *Alpha* distribution is defined by the following probability density function (PDF):
 
 ```math
-f(x) = \\frac{\\beta}{\\sqrt{2\\pi} \\Phi(\\alpha) x^2} \\exp\\left(-\\frac{(\\alpha - \\frac{\\beta}{x})^2}{2}\\right), \\quad x > 0
+f(x; \\alpha, \\beta) = \\frac{\\beta}{\\sqrt{2\\pi} \\Phi(\\alpha) x^2} \\exp\\left(-\\frac{(\\alpha - \\frac{\\beta}{x})^2}{2}\\right), \\quad x > 0
 ```
 where:
 
-- α is a location parameter
-- β is a scale parameter
+- \\alpha is a location parameter
+- \\beta is a scale parameter
 - \\Phi is the cumulative distribution function (CDF) of the standard normal distribution.
 
 ```julia

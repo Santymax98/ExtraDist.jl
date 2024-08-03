@@ -8,11 +8,16 @@ P(X = k) = \\frac{1}{H_{N,s}} \\frac{1}{k^s}
 \\end{cases}
 ```
 Where ``H_{N, s}`` is a generalized harmonic number
+
 ```julia
 Zipf()      # equivalent to BetaNegBinomial(1, 1)
 Zipf(N)     # equivalent to BetaNegBinomial(N, 1)
 
 params(d)   # Get the parameters, i.e. (N, s)
+
+External link:
+
+*[Zipf distribution on Wikipedia](https://en.wikipedia.org/wiki/Zipf%27s_law)
 """
 struct Zipf{T<:Real} <: Distributions.DiscreteUnivariateDistribution
     N::Int

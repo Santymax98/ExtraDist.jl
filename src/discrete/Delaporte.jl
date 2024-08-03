@@ -1,10 +1,11 @@
 """
     Delaporte(λ,α,β)
 
-A *Beta Negative Binomial* is the compound distribution of the [`NegativeBinomial`](https://juliastats.org/Distributions.jl/stable/univariate/#Distributions.NegativeBinomial) distribution where the probability of success `p` is distributed according to the `Beta`. It has three parameters: `r`, the number of successes number of successes until the experiment is stopped and two shape parameters `α`, `β`
  
+A *Delaporte* distribution is a discrete probability distribution that can be viewed as a compound distribution. It combines a Poisson distribution (with mean `λ`) and a Gamma distribution (with shape parameters `α` and `β`). The probability mass function (PMF) of the Delaporte distribution is given by:
+
 ```math
-P(X=k) = 
+P(X = k) = \\sum_{i=0}^{k} \\frac{\\Gamma(\\alpha + i) \\beta^i \\lambda^{k-i} e^{-\\lambda}}{\\Gamma(\\alpha) i! (k-i)!}, \\quad k \\in \\{0, 1, 2, \\dots\\}
 ```
 
 ```julia
@@ -15,9 +16,9 @@ Delaporte(λ, α)    # equivalent to Delaporte(r, α, α)
 params(d)        # Get the parameters, i.e. (λ, α, β)
 ```
 
-External links
+External link:
 
-* [Beta Negative Binomial distribution on Wikipedia](https://en.wikipedia.org/wiki/Beta_negative_binomial_distribution)
+* [Delaporte distribution on Wikipedia](https://en.wikipedia.org/wiki/Delaporte_distribution)
 """
 struct Delaporte{T<:Real} <: Distributions.DiscreteUnivariateDistribution
     λ::T

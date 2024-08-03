@@ -1,9 +1,10 @@
 """
     Benktander_Type1(a, b)
 
-A *Benktander_Type1* distribution, 
+A *Benktander_Type1* distribution, which is used in actuarial science for modeling heavy-tailed distributions. The probability density function (pdf) of the Benktander Type 1 distribution is given by:
+
 ```math
-f(x) = 
+f(x; a, b) = \\left[\\left(1 + \\frac{2b \\log x}{a}\\right)\\left(1 + a + 2b \\log x\\right) - \\frac{2b}{a}\\right] x^{-\\left(2 + a + b \\log x\\right)}, \\quad x \\geq 1
 ```
 
 ```julia
@@ -12,6 +13,10 @@ Benktander_Type1(a)        # equivalent to Benktander_Type1(a, a(a+1)/2)
 
 params(d)        # Get the parameters, i.e. (a, b)
 ```
+
+External links:
+
+* [Benktander Type I distribution on Wikipedia](https://en.wikipedia.org/wiki/Benktander_type_I_distribution)
 """
 struct Benktander_Type1{T<:Real} <: Distributions.ContinuousUnivariateDistribution
     a::T

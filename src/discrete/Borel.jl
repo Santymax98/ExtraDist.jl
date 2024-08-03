@@ -1,18 +1,21 @@
 """
     Borel(a)
 
-An *Borel* distribution is defined by the following probability density function (PDF):
+A `Borel` distribution is a discrete probability distribution often used in branching processes and queueing theory. The probability mass function (PMF) of the Borel distribution is given by:
 
 ```math
-f(x) =
+P(X = k) = \\frac{e^{-a k} (a k)^{k-1}}{k!}, \\quad k \\in \\{1, 2, 3, \\dots\\}
 ```
-where:
 
 ```julia
 Borel()        # equivalent to Borel(0)
 
 params(d)        # Get the parameters, i.e. a
 ```
+
+External link:
+
+* [Borel distribution on Wikipedia](https://en.wikipedia.org/wiki/Borel_distribution)
 """
 struct Borel{T<:Real} <: Distributions.DiscreteUnivariateDistribution
     a::T

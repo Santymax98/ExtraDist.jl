@@ -1,10 +1,10 @@
 """
     BetaNegBinomial(r,α,β)
 
-A *Beta Negative Binomial* is the compound distribution of the [`NegativeBinomial`](https://juliastats.org/Distributions.jl/stable/univariate/#Distributions.NegativeBinomial) distribution where the probability of success `p` is distributed according to the `Beta`. It has three parameters: `r`, the number of successes number of successes until the experiment is stopped and two shape parameters `α`, `β`
+A *Beta Negative Binomial* is the compound distribution of the [`NegativeBinomial`](https://juliastats.org/Distributions.jl/stable/univariate/#Distributions.NegativeBinomial) distribution where the probability of success `p` is distributed according to the `Beta`. It has three parameters: `r`, the number of successes number of successes until the experiment is stopped and two shape parameters ``\\alpha``, ``\\beta``
  
 ```math
-P(X=k) = 
+P(X = k) = \\frac{B(r + k, \\alpha + \\beta)}{B(r, \\alpha) k!} \\frac{\\Gamma(k + \\beta)}{\\Gamma(\\beta)}
 ```
 
 ```julia

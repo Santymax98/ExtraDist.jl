@@ -1,17 +1,21 @@
 """
     Zeta(s)
 
-A *Zeta distribution* ... 
+The *Zeta distribution* is a discrete probability distribution defined by the following probability mass function (PMF):
 
 ```math
-P(X = k) = \\frac{1}{\\zeta(s)} \\frac{1}{k^s}
-\\end{cases}
+P(X = k) = \\frac{1}{\\zeta(s)} \\cdot \\frac{1}{k^s}
 ```
 Where ``\\zeta`` is a Riemann Function
+
 ```julia
 Zeta()      # equivalent to Zeta(1)
 
 params(d)   # Get the parameters, i.e. s
+
+External link:
+
+*[Zeta Distribution on Wikipedia](https://en.wikipedia.org/wiki/Zeta_distribution)
 """
 struct Zeta{T<:Real} <: Distributions.DiscreteUnivariateDistribution
     s::T

@@ -1,9 +1,10 @@
 """
     Gompertz(η , b)
 
-A *Gompertz* distribution, 
+A `Gompertz` distribution is commonly used to describe the distribution of adult lifespans and model survival data. The probability density function (PDF) of the Gompertz distribution is given by:
+
 ```math
-f(x) = 
+f(x; \\eta, b) = \\eta b \\exp(\\eta + b x - \\eta e^{b x}), \\quad x \\geq 0
 ```
 
 ```julia
@@ -12,6 +13,10 @@ Gompertz(η)        # equivalent to Gompertz(η, 1)
 
 params(d)        # Get the parameters, i.e. (η, b)
 ```
+
+External links:
+
+* [Gompertz distribution on Wikipedia](https://en.wikipedia.org/wiki/Gompertz_distribution)
 """
 struct Gompertz{T<:Real} <: Distributions.ContinuousUnivariateDistribution
     η::T

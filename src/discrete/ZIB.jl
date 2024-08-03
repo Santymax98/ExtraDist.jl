@@ -1,10 +1,14 @@
 """
     ZIB(n, θ, p)
 
-A *Zero inflated Binomial distribution* ... 
+The *Zero-Inflated Binomial (ZIB) distribution* is a discrete probability distribution that extends the binomial distribution by incorporating an excess of zero counts. The probability mass function (PMF) is defined as:
 
 ```math
-P(X = k) = 
+P(X = k) =
+\\begin{cases} 
+\\theta + (1 - \\theta) \\cdot (1 - p)^n & \\text{if } k = 0, \\
+(1 - \\theta) \\cdot \\binom{n}{k} p^k (1 - p)^{n-k} & \\text{if } k > 0.
+\\end{cases}
 ```
 
 ```julia

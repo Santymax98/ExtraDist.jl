@@ -1,15 +1,15 @@
 """
     Nakagami(m, Ω)
 
-An *Nakagami* distribution is defined by the following probability density function (PDF):
+A *Nakagami* distribution, often used to model physical phenomena in areas such as medical ultrasound imaging and communications, is defined by the following probability density function (PDF):
 
 ```math
-f(x) = 
+f(x; m, \\Omega) = \\frac{2m^m}{\\Gamma(m) \\Omega^m} x^{2m-1} \\exp\\left(-\\frac{m}{\\Omega} x^2\\right), \\quad x \\geq 0
 ```
 where:
 
 - m is a shape parameter
-- Ω is a spread parameter
+- ``\\Omega`` is a spread parameter
 
 ```julia
 Nakagami()        # equivalent to Nakagami(0.5, 1)
@@ -17,6 +17,10 @@ Nakagami(m)        # equivalent to Nakagami(m, 1)
 
 params(d)        # Get the parameters, i.e. (m, Ω)
 ```
+
+External links:
+
+* [Nakagami distribution on Wikipedia](https://en.wikipedia.org/wiki/Nakagami_distribution)
 """
 struct Nakagami{T<:Real} <: Distributions.ContinuousUnivariateDistribution
     m::T

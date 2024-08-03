@@ -1,16 +1,20 @@
 """
-    ZIB(n, θ, p)
+    ZINB(n, θ, p)
 
-A *Zero inflated Binomial distribution* ... 
+The *Zero-Inflated Negative Binomial (ZINB) distribution* is a discrete probability distribution that combines the negative binomial distribution with an excess of zeros. The probability mass function (PMF) is defined as:
 
 ```math
-P(X = k) = 
+P(X = k) =
+\\begin{cases} 
+\\theta + (1 - \\theta) \\cdot (1 - p)^r & \\text{if } k = 0, \\
+(1 - \\theta) \\cdot \\binom{k + r - 1}{k} p^r (1 - p)^k & \\text{if } k > 0.
+\\end{cases}
 ```
 
 ```julia
-ZIB()       # equivalent to ZIB(1, 0.5, 0.5)
-ZIB(r)      # equivalent to ZIB(r, 0.5, 0.5)
-ZIB(r, θ)   # equivalent to ZIB(r, θ, 0.5)
+ZINB()       # equivalent to ZINB(1, 0.5, 0.5)
+ZINB(r)      # equivalent to ZINB(r, 0.5, 0.5)
+ZINB(r, θ)   # equivalent to ZINB(r, θ, 0.5)
 
 params(d)   # Get the parameters, i.e. (r, θ, p)
 """

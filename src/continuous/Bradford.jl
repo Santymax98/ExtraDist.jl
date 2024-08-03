@@ -1,10 +1,10 @@
 """
     Bradford(a)
 
-An *Bradford* distribution is defined by the following probability density function (PDF):
+A *Bradford* distribution is defined by the following probability density function (PDF):
 
 ```math
-f(x) =
+f(x; a) = \\frac{a}{\\log(1+a) \\cdot (1 + a \\cdot x)}, \\quad 0 < x < 1
 ```
 where:
 
@@ -13,6 +13,10 @@ Bradford()        # equivalent to Bradford(1)
 
 params(d)        # Get the parameters, i.e. a
 ```
+
+External links:
+
+* [Bradford on Wikipedia](https://en.wikipedia.org/wiki/Bradford%27s_law)
 """
 struct Bradford{T<:Real} <: Distributions.ContinuousUnivariateDistribution
     a::T

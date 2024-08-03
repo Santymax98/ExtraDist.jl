@@ -1,11 +1,10 @@
 """
     Dagum(a, b, p)
 
-An *Dagum* distribution is defined by three parameters: `a`, `b`, and `p`, 
-The probability density function (PDF) of the Dagum distribution is given by:
+A *Dagum* distribution is defined by three parameters: `a`, `b`, and `p`. It is commonly used in economics for modeling income distributions. The probability density function (PDF) of the Dagum distribution is given by:
 
 ```math
-f(x; a, b, p) =
+f(x; a, b, p) = \\frac{a \\cdot p}{x} \\left(\\frac{x}{b}\\right)^{a p} \\left(\\left(\\frac{x}{b}\\right)^a + 1\\right)^{-(p+1)}, \\quad x > 0
 ```
 
 ```julia
@@ -15,6 +14,10 @@ Dagum(a, b)    # equivalent to Dagum(a, b, 1)
 
 params(d)        # Get the parameters, i.e. (a, b, p)
 ```
+
+External links:
+
+* [Dagum distribution on Wikipedia](https://en.wikipedia.org/wiki/Dagum_distribution)
 """
 struct Dagum{T<:Real} <: Distributions.ContinuousUnivariateDistribution
     a::T

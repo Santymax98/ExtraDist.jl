@@ -14,6 +14,10 @@ BirnbaumSaunders(σ,β)       # equivalent to BirnbaumSaunders(0, α, β)
 
 params(d)        # Get the parameters, i.e. (μ , α, β)
 ```
+
+External links:
+
+* [Birnbaum Saunders distribution on Wikipedia](https://en.wikipedia.org/wiki/Birnbaum%E2%80%93Saunders_distribution)
 """
 struct BirnbaumSaunders{T<:Real} <: Distributions.ContinuousUnivariateDistribution
     μ::T

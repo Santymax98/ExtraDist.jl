@@ -1,15 +1,15 @@
 """
     Lomax(α, λ)
 
-An *Lomax* distribution is defined by the following probability density function (PDF):
+A `Lomax` distribution, also known as the Pareto Type II distribution, is commonly used in business, economics, and actuarial science. The probability density function (PDF) of the Lomax distribution is given by:
 
 ```math
-f(x) = 
+f(x; \\alpha, \\lambda) = \\frac{\\alpha}{\\lambda} \\left(1 + \\frac{x}{\\lambda}\\right)^{-(\\alpha + 1)}, \\quad x \\geq 0
 ```
 where:
 
-- α is a shape parameter
-- λ is a scale parameter
+- ``\\alpha`` is a shape parameter
+- ``\\lambda`` is a scale parameter
 
 ```julia
 Lomax()        # equivalent to Lomax(1, 1)
@@ -17,6 +17,10 @@ Lomax(α)       # equivalent to Lomax(α, 1)
 
 params(d)      # Get the parameters, i.e. (α, λ)
 ```
+
+External links:
+
+* [Lomax distribution on Wikipedia](https://en.wikipedia.org/wiki/Lomax_distribution)
 """
 struct Lomax{T<:Real} <: Distributions.ContinuousUnivariateDistribution
     α::T

@@ -1,10 +1,10 @@
 """
     Logarithmic(a)
 
-An *Logarithmic* distribution is defined by the following probability density function (PDF):
+A `Logarithmic` distribution, also known as the log-series distribution, is defined by the following probability mass function (PMF):
 
 ```math
-f(x) =
+P(X = k) = -\\frac{1}{\\log(1 - p)} \\cdot \\frac{p^k}{k}, \\quad k \\in \\{1, 2, 3, \\dots\\}
 ```
 where:
 
@@ -13,6 +13,10 @@ Logarithmic()        # equivalent to Logarithmic(0.5)
 
 params(d)        # Get the parameters, i.e. a
 ```
+
+External link:
+
+* [Logarithmic distribution on Wikipedia](https://en.wikipedia.org/wiki/Logarithmic_distribution)
 """
 struct Logarithmic{T<:Real} <: Distributions.DiscreteUnivariateDistribution
     a::T

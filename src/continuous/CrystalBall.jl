@@ -1,12 +1,21 @@
 """
     CrystalBall(α, m, x̄, σ)
 
-An *CrystalBall* distribution is defined by the following probability density function (PDF):
+A *CrystalBall* distribution is commonly used to model various lossy processes in high-energy physics. The probability density function (PDF) of the Crystal Ball distribution is defined as:
 
 ```math
-f(x) =
+f(x; \\alpha, n, \\bar{x}, \\sigma) =
+\\begin{cases} 
+N \\cdot \\exp\\left(-\\frac{(x - \\bar{x})^2}{2\\sigma^2}\\right), & \\text{for } \\frac{x - \\bar{x}}{\\sigma} > -\\alpha \\
+N \\cdot A \\cdot \\left(B - \\frac{x - \\bar{x}}{\\sigma}\\right)^{-n}, & \\text{for } \\frac{x - \\bar{x}}{\\sigma} ≤ -\\alpha
+\\end{cases}
 ```
 where:
+* ``A = \\left(\\frac{n}{|\\alpha|}\\right)^n \\cdot \\exp\\left(-\\frac{|\\alpha|^2}{2}\\right)``
+* ``B = \\frac{n}{|\\alpha|} - |\\alpha|``
+* ``N = \\frac{1}{\\sigma(C + D)}``
+* ``C = \\frac{n}{|\\alpha|} \\cdot \\frac{1}{n - 1} \\cdot \\exp\\left(-\\frac{|\\alpha|^2}{2}\\right)``
+* ``D = \\sqrt{\\frac{\\pi}{2}} \\left(1 + \\text{erf}\\left(\\frac{|\\alpha|}{\\sqrt{2}}\\right)\\right)``
 
 ```julia
 CrystalBall(α, m)        # equivalent to CrystalBall(α, m, 0, 1)
@@ -14,6 +23,10 @@ CrystalBall(α, m, x̄)     # equivalent to CrystalBall(α, m, x̄, 1)
 
 params(d)        # Get the parameters, i.e. (α, m, x̄, σ)
 ```
+
+External links:
+
+* [CrystalBall distribution on Wikipedia](https://en.wikipedia.org/wiki/Crystal_Ball_function)
 """
 struct CrystalBall{T<:Real} <: Distributions.ContinuousUnivariateDistribution
     α::T # shape

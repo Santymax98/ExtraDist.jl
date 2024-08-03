@@ -1,18 +1,26 @@
 """
     PERT(a, b, m)
 
-An *PERT* distribution is defined by the following probability density function (PDF):
+A `PERT` distribution is commonly used in project management for modeling the uncertainty of task durations. The probability density function (PDF) of the PERT distribution is given by:
 
 ```math
-f(x) =
+f(x; a, b, c) = \\frac{(x - a)^{\\alpha - 1} (c - x)^{\\beta - 1}}{B(\\alpha, \\beta) (c - a)^{\\alpha + \\beta - 1}}, \\quad a \\leq x \\leq c
 ```
 where:
+
+- ``\\alpha = 1 + 4\\frac{b - a}{c - a}``
+- ``\\beta = 1 + 4\\frac{c - b}{c - a}``
+- ``B(\\alpha, \\beta)`` is a [beta function](https://en.wikipedia.org/wiki/Beta_function)
 
 ```julia
 PERT()        # equivalent to PERT(0, 0.5, 1)
 
 params(d)        # Get the parameters, i.e. (a, b, m)
 ```
+
+External links:
+
+* [PERT distribution on Wikipedia](https://en.wikipedia.org/wiki/PERT_distribution)
 """
 struct PERT{T<:Real} <: Distributions.ContinuousUnivariateDistribution
     a::T # minimum

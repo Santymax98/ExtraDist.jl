@@ -1,12 +1,14 @@
 """
     Conway(λ, ν)
 
-A *Conway–Maxwell–Poisson* distribution is defined by the following probability density function (PDF):
+A *Conway–Maxwell–Poisson* distribution, often used to model overdispersed and underdispersed count data, is defined by the following probability mass function (PMF):
 
 ```math
-f(x) =
+P(X = x) = \\frac{\\lambda^x}{(x!)^\\nu Z(\\lambda, \\nu)}, \\quad x \\in \\{0, 1, 2, \\dots\\}
 ```
 where:
+
+- ``Z(\\lambda, \\nu) = \\sum_{j=0}^{\\infty} \\frac{\\lambda^j}{(j!)^\\nu}`` is a normalization constant that ensures the sum of probabilities equals 1.
 
 ```julia
 Conway()        # equivalent to Conway(1, 1)
@@ -15,6 +17,10 @@ Conway(λ, ν)    # equivalent to Conway(λ, ν)
 
 params(d)        # Get the parameters, i.e. (λ, ν)
 ```
+
+External link:
+
+* [Conway Maxwell Poisson distribution on Wikipedia](https://en.wikipedia.org/wiki/Conway%E2%80%93Maxwell%E2%80%93Poisson_distribution)
 """
 struct Conway{T<:Real} <: Distributions.DiscreteUnivariateDistribution
     λ::T

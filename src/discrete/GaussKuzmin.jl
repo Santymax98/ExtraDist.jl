@@ -1,10 +1,10 @@
 """
     GaussKuzmin()
 
-An *GaussKuzmin* distribution is defined by the following probability density function (PDF):
+A `Gauss-Kuzmin` distribution is a discrete probability distribution that arises as the limiting distribution of the coefficients in the continued fraction expansion of a random variable uniformly distributed on (0, 1). The probability mass function (PMF) of the Gauss-Kuzmin distribution is given by:
 
 ```math
-f(x) =
+P(X = k) = -\\log_2\\left(1 - \\frac{1}{(1 + k)^2}\\right), \\quad k \\in \\{1, 2, 3, \\dots\\}
 ```
 where:
 
@@ -13,6 +13,10 @@ GaussKuzmin()        # equivalent to GaussKuzmin()
 
 params(d)        # Get the parameters, i.e. none
 ```
+
+External link:
+
+* [Gauss Kuzmin distributions on Wikipedia](https://en.wikipedia.org/wiki/Gauss%E2%80%93Kuzmin_distribution)
 """
 struct GaussKuzmin <: Distributions.DiscreteUnivariateDistribution
 end

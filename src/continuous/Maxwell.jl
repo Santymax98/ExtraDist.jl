@@ -1,18 +1,21 @@
 """
     Maxwell(a)
 
-An *Maxwell* distribution is defined by the following probability density function (PDF):
+A *Maxwell-Boltzmann* distribution, often used in physics to describe the distribution of particle speeds in idealized gases, is defined by the following probability density function (PDF):
 
 ```math
-f(x) =
+f(x; a) = \\sqrt{\\frac{2}{\\pi}} \\frac{x^2}{a^3} \\exp\\left(-\\frac{x^2}{2a^2}\\right), \\quad x > 0
 ```
-where:
 
 ```julia
 Maxwell()        # equivalent to Maxwell(1)
 
 params(d)        # Get the parameters, i.e. a
 ```
+
+External links:
+
+* [Maxwell Boltzmann distribution on Wikipedia](https://en.wikipedia.org/wiki/Maxwell%E2%80%93Boltzmann_distribution)
 """
 struct Maxwell{T<:Real} <: Distributions.ContinuousUnivariateDistribution
     a::T

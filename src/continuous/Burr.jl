@@ -1,7 +1,7 @@
 """
     Burr(c, k, λ)
 
-An *Burr* distribution is defined by three parameters: `c`, `k`, and `λ`, where `c` and `k` are shape parameters and `λ` is a scale parameter.
+An *Burr* distribution is defined by three parameters: ``c``, ``k``, and ``\\lambda``, where `c` and `k` are shape parameters and ``\\lambda`` is a scale parameter.
 
 The probability density function (PDF) of the Burr distribution is given by:
 
@@ -16,6 +16,10 @@ Burr(c, k)    # equivalent to Burr(c, k, 1)
 
 params(d)        # Get the parameters, i.e. (c, k, λ)
 ```
+
+External links:
+
+* [Burr distribution on Wikipedia](https://en.wikipedia.org/wiki/Burr_distribution)
 """
 struct Burr{T<:Real} <: Distributions.ContinuousUnivariateDistribution
     c::T

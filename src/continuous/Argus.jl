@@ -1,9 +1,10 @@
 """
     Argus(χ, c)
 
-A *Argus* distribution, 
+A *Argus* distribution, which is used in particle physics to describe the invariant mass of a decayed particle candidate. The probability density function (pdf) of the ARGUS distribution is given by:
+
 ```math
-f(x) = 
+f(x; χ, c) = \\frac{\\xi^3}{\\sqrt{2\\pi}\\Phi(\\xi)} \\cdot \\frac{x}{c^2} \\sqrt{1 - \\frac{x^2}{c^2}} \\exp\\left(-\\frac{1}{2}\\xi^2\\left(1 - \\frac{x^2}{c^2}\\right)\\right)
 ```
 
 ```julia
@@ -11,6 +12,10 @@ Argus()        # equivalent to Argus(1, 1)
 
 params(d)        # Get the parameters, i.e. (χ, c)
 ```
+
+External links:
+
+* [Argus distribution on Wikipedia](https://en.wikipedia.org/wiki/ARGUS_distribution)
 """
 struct Argus{T<:Real} <: Distributions.ContinuousUnivariateDistribution
     χ::T
