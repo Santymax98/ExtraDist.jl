@@ -15,6 +15,7 @@ ZIP()      # equivalent to ZIP(1, 0.5)
 ZIP(λ)     # equivalent to ZIP(λ, 0.5)
 
 params(d)   # Get the parameters, i.e. (λ, p)
+```
 
 External link:
 

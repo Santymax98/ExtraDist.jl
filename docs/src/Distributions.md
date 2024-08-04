@@ -58,19 +58,19 @@ plotdensity((0.0, 1.0), Argus, (1, 1)) # hide
 Benini
 ```
 ```@example plotdensity
-plotdensity((0.0, 1.0), Benini, (1, 1, 1)) # hide
+plotdensity((1.0, 2.0), Benini, (1, 1, 1)) # hide
 ```
 ```@docs
 Benktander_Type1
 ```
 ```@example plotdensity
-plotdensity((0.0, 1.0), Benktander_Type1, (1, 1)) # hide
+plotdensity((1.0, 2.0), Benktander_Type1, (1, 1)) # hide
 ```
 ```@docs
 Benktander_Type2
 ```
 ```@example plotdensity
-plotdensity((0.0, 1.0), Benktander_Type2, (1, 1)) # hide
+plotdensity((1.0, 2.0), Benktander_Type2, (1, 1)) # hide
 ```
 ```@docs
 Bhattacharjee
@@ -130,7 +130,7 @@ plotdensity((0.0, 1.0), Maxwell, (1,)) # hide
 Nakagami
 ```
 ```@example plotdensity
-plotdensity((-1.0, 1.0), Nakagami, (0.5, 1.0)) # hide
+plotdensity((0.0, 1.0), Nakagami, (0.5, 1.0)) # hide
 ```
 ```@docs
 PERT

@@ -17,6 +17,8 @@ ZINB(r)      # equivalent to ZINB(r, 0.5, 0.5)
 ZINB(r, θ)   # equivalent to ZINB(r, θ, 0.5)
 
 params(d)   # Get the parameters, i.e. (r, θ, p)
+```
+
 """
 struct ZINB{T<:Real} <: Distributions.DiscreteUnivariateDistribution
     r::Int

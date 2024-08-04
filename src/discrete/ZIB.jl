@@ -17,6 +17,8 @@ ZIB(n)      # equivalent to ZIB(n, 0.5, 0.5)
 ZIB(n, θ)   # equivalent to ZIB(n, θ, 0.5)
 
 params(d)   # Get the parameters, i.e. (n, θ, p)
+```
+
 """
 struct ZIB{T<:Real} <: Distributions.DiscreteUnivariateDistribution
     n::Int

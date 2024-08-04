@@ -14,6 +14,7 @@ Zipf()      # equivalent to BetaNegBinomial(1, 1)
 Zipf(N)     # equivalent to BetaNegBinomial(N, 1)
 
 params(d)   # Get the parameters, i.e. (N, s)
+```
 
 External link:
 

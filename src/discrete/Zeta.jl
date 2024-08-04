@@ -12,7 +12,7 @@ Where ``\\zeta`` is a Riemann Function
 Zeta()      # equivalent to Zeta(1)
 
 params(d)   # Get the parameters, i.e. s
-
+```
 External link:
 
 *[Zeta Distribution on Wikipedia](https://en.wikipedia.org/wiki/Zeta_distribution)

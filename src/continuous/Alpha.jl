@@ -8,9 +8,9 @@ f(x; \\alpha, \\beta) = \\frac{\\beta}{\\sqrt{2\\pi} \\Phi(\\alpha) x^2} \\exp\\
 ```
 where:
 
-- \\alpha is a location parameter
-- \\beta is a scale parameter
-- \\Phi is the cumulative distribution function (CDF) of the standard normal distribution.
+- ``\\alpha`` is a location parameter
+- ``\\beta`` is a scale parameter
+- ``\\Phi`` is the cumulative distribution function (CDF) of the standard normal distribution.
 
 ```julia
 Alpha()        # equivalent to Alpha(1, 1)
