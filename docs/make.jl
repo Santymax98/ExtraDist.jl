@@ -18,6 +18,7 @@ makedocs(;
     pages=[
         "index.md",
         "starting.md",
+        "Compatibility.md",
         "Distributions.md"
     ],
 )

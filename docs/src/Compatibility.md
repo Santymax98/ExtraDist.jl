@@ -56,6 +56,7 @@ rank: 5
 )
 ```
 
+
 ## Integration with Other Packages
 
 Because of its compatibility with *Distributions.jl*, *ExtraDistributions* seamlessly integrates with other Julia packages that also build on *Distributions.jl*. This includes:

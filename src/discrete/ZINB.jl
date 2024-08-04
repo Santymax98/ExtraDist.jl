@@ -6,7 +6,7 @@ The *Zero-Inflated Negative Binomial (ZINB) distribution* is a discrete probabil
 ```math
 P(X = k) =
 \\begin{cases} 
-\\theta + (1 - \\theta) \\cdot (1 - p)^r & \\text{if } k = 0, \\
+\\theta + (1 - \\theta) \\cdot (1 - p)^r & \\text{if } k = 0, \\\\
 (1 - \\theta) \\cdot \\binom{k + r - 1}{k} p^r (1 - p)^k & \\text{if } k > 0.
 \\end{cases}
 ```

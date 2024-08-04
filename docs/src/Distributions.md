@@ -183,3 +183,8 @@ ZIP
 ```@docs
 Zipf
 ```
+## Index
+
+```@index
+Pages = ["Distributions.md"]
+```

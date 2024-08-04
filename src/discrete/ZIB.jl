@@ -6,7 +6,7 @@ The *Zero-Inflated Binomial (ZIB) distribution* is a discrete probability distri
 ```math
 P(X = k) =
 \\begin{cases} 
-\\theta + (1 - \\theta) \\cdot (1 - p)^n & \\text{if } k = 0, \\
+\\theta + (1 - \\theta) \\cdot (1 - p)^n & \\text{if } k = 0, \\\\
 (1 - \\theta) \\cdot \\binom{n}{k} p^k (1 - p)^{n-k} & \\text{if } k > 0.
 \\end{cases}
 ```

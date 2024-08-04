@@ -4,8 +4,7 @@
 A *Zipf distribution* ... 
 
 ```math
-P(X = k) = \\frac{1}{H_{N,s}} \\frac{1}{k^s}
-\\end{cases}
+P(X = k) = \\frac{1}{H_{N,s}}\\cdot \\frac{1}{k^s}
 ```
 Where ``H_{N, s}`` is a generalized harmonic number
 

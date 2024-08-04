@@ -6,7 +6,7 @@ The *Zero-Inflated Poisson (ZIP) distribution* is a discrete probability distrib
 ```math
 P(X = k) =
 \\begin{cases} 
-p + (1 - p) \\cdot e^{-\\lambda} & \\text{if } k = 0, \\
+p + (1 - p) \\cdot e^{-\\lambda} & \\text{if } k = 0, \\\\
 (1 - p) \\cdot \\frac{\\lambda^k \\cdot e^{-\\lambda}}{k!} & \\text{if } k \\geq 1.
 \\end{cases}
 
